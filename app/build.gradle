@@ -3,7 +3,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.ben-manes.versions'
-//apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 28
@@ -24,8 +23,7 @@ android {
         // Major -> Millions, Minor -> Thousands, Bugfix -> Hundreds. E.g 1.3.72 == 1,003,072
         versionName '0.1.0'
 
-        buildConfigField("String", "POKEAPI_API_URL",
-                "\"${PokeapiApiUrl}\"")
+        buildConfigField("String", "POKEAPI_API_URL", "\"${PokeapiApiUrl}\"")
 
         multiDexEnabled true
     }
@@ -105,7 +103,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation supportLibs
-    implementation googlePlayLibs
     implementation networkLibs
     implementation rxJavaLibs
     implementation otherLibs
@@ -125,9 +122,6 @@ dependencies {
     kapt annotationProcessorLibs
     kaptTest daggerCompiler
     kaptAndroidTest daggerCompiler
-
-    testImplementation unitTestLibs
-    androidTestImplementation androidTestsLibs
 
     testImplementation unitTestLibs
     androidTestImplementation androidTestsLibs
