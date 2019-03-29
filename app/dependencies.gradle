@@ -16,23 +16,23 @@ ext {
             glide           : '4.8.0',
             sherlock        : '1.0.4@aar',
 
+            junit           : '4.12',
+            mockito         : '2.23.4',
+            mockitoKotlin   : '1.6.0',
+            restMock        : '0.3.2',
             espresso        : '3.0.2',
             testRunner      : '1.0.2',
             hamcrest        : '2.1',
-            restMock        : '0.3.2',
-            mockito         : '2.23.4',
-            junit           : '4.12',
-            robolectric     : '4.1',
             assertj         : '1.2.0',
-            powerMock       : '1.6.6',
+
             leakcanary      : '1.6.2',
             stethOkhttp     : '1.5.0',
             multiDex        : '2.0.1',
-            mockitoKotlin   : '1.6.0'
+
     ]
 
-    mockito = [mockito: "org.mockito:mockito-core:$versions.mockito"]
     junit = [junit: "junit:junit:$versions.junit"]
+    mockito = [mockito: "org.mockito:mockito-core:$versions.mockito"]
     restMock = [restMock: "com.github.andrzejchm.RESTMock:android:$versions.restMock"]
 
     supportDeps = [
@@ -79,17 +79,7 @@ ext {
     ]
 
     unitTest = [
-            harcrestCore        : "org.hamcrest:hamcrest-core:$versions.hamcrest",
-            harmcrestLib        : "org.hamcrest:hamcrest-library:$versions.hamcrest",
-            hamcrestIntegration : "org.hamcrest:hamcrest-integration:1.4-atlassian-1",
-            robolectric         : "org.robolectric:robolectric:$versions.robolectric",
-            supportAnnotation   : "com.android.support:support-annotations:$versions.support",
-            restMock            : "com.github.andrzejchm.RESTMock:android:$versions.restMock",
-            assertj             : "com.squareup.assertj:assertj-android:$versions.assertj",
-            kotlinTest          : "org.jetbrains.kotlin:kotlin-test:$kotlin_version",
-            kotlinJunit         : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
             mockitoKotlin       : "com.nhaarman:mockito-kotlin:$versions.mockitoKotlin"
-
     ] + junit + mockito + restMock
 
     androidTests = [
